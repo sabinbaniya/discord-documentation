@@ -96,4 +96,10 @@ export const envVariables: EnvVariableInterface[] = [
     description:
       'This is a 64-Byte Base64 string used to authenticate database entries. Generate this with <code>openssl rand -base64 64</code>.',
   },
+  {
+    name: 'SENTRY_DSN',
+    optional: 'OPTIONAL',
+    description:
+      'This enables external logging through Sentry.io - you will need to set up and configure a project there.',
+  },
 ];
