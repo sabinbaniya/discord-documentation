@@ -39,9 +39,11 @@
   </li>
   <li>
     Then, add the basic structure of our command. Note that all commands should
-    be wrapped in a try/catch block:
+    be wrapped in a try/catch block and use Becca's standard error handler:
     <pre><code style="white-space: pre-wrap;">
       import CommandInt from "../../interfaces/CommandInt";
+      import {{'{'}} beccaErrorHandler {{'}'}} from "../../utils/beccaErrorHandler";
+
       const messageRepeater: CommandInt = {{'{'}}
         name: "messageRepeater",
         description: "Send a message to the current channel using Becca.",
@@ -51,9 +53,13 @@
           try {{'{'}}
             console.log("Message repeater command called!");
           {{'}'}} catch (error) {{'{'}}
-            console.log(`${{'{'}}message.guild?.name{{'}'}} encountered the following error with the messageRepeater command:`);
-            console.log(error);
-            await message.reply('I am so sorry, but I cannot do that right now.')
+          await beccaErrorHandler(
+            error,
+            message.guild?.name || "undefined",
+          "about command",
+          message.Becca.debugHook,
+          message
+          );
           {{'}'}}
         {{'}'}},
       {{'}'}};
