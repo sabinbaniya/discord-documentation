@@ -25,6 +25,8 @@
     "@angular/platform-browser": "11.2.8",
     "@angular/platform-browser-dynamic": "11.2.8",
     "@angular/router": "11.2.8",
+    "@sentry/angular": "^6.2.5",
+    "@sentry/tracing": "^6.2.5",
     "rxjs": "6.6.7",
     "tslib": "2.2.0",
     "zone.js": "0.11.4"
