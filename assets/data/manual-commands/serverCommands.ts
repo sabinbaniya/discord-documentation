@@ -24,6 +24,10 @@ export const serverCommands: CommandInt[] = [
     parameters: '[?user]',
   },
   {
+    name: 'levelscale',
+    description: 'This command returns a set of embeds containing the breakdown for the level scale.'
+  },
+  {
     name: 'list',
     description:
       'This command returns embed(s) containing a list of the servers Becca is in, and the owner information for each server.',
