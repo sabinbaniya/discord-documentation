@@ -14,6 +14,7 @@ const navLinkText = [
   'Deprecated Commands',
   'Contribute to Becca Lyria',
   'Create a New Command',
+  'Level Scale',
   'Troubleshooting',
   'Privacy Policy',
   '© 2021 - Nicholas Carrigan',
