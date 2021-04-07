@@ -12,14 +12,13 @@ export class LevelscaleComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    const fullLevels: number[] = [];
     let j = 0;
-    for (let i = 1; i < 51; i++) {
+    for (let i = 1; i < 101; i++) {
       j += i * 100;
-      this.levelsFirst.push(j);
+      fullLevels.push(j);
     }
-    for (let i = 51; i < 101; i++) {
-      j += i * 100;
-      this.levelsSecond.push(j);
-    }
+    this.levelsFirst = fullLevels.slice(0, 50);
+    this.levelsSecond = fullLevels.slice(50);
   }
 }
