@@ -16,6 +16,7 @@ import { ContributeComponent } from './contribute/contribute.component';
 import { NewCommandComponent } from './new-command/new-command.component';
 import { TroubleComponent } from './trouble/trouble.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { LevelscaleComponent } from './levelscale/levelscale.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
     NewCommandComponent,
     TroubleComponent,
     PrivacyComponent,
+    LevelscaleComponent,
   ],
   imports: [
     BrowserModule,

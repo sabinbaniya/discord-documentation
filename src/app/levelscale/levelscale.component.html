@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Level</th>
+    <th>Experience Needed</th>
+    <th>Level</th>
+    <th>Experience Needed</th>
+  </tr>
+  <tr *ngFor="let level of levelsFirst; let index = index">
+    <td class="level">{{ index + 1}}</td>
+    <td class="points">{{ levelsFirst[index] }}</td>
+    <td class="level">{{ index + 51 }}</td>
+    <td class="points">{{ levelsSecond[index] }}</td>
+  </tr>
+</table>

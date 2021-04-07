@@ -1,13 +1,12 @@
 {
   "name": "becca-lyria",
-  "version": "11.4.0",
+  "version": "12.3.0",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test --browsers=Chrome",
-    "test:CI": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "test": "ng test --no-watch --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng deploy"

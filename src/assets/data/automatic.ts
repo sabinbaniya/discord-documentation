@@ -21,7 +21,7 @@ export const autoCommands: AutoCommandInt[] = [
   {
     name: 'Levelling System',
     description:
-      'Becca listens to each message and gives experience points to the message author. The values are stored in a MongoDB database, and Becca sends a level up message at every 100xp increment.',
+      'Becca listens to each message and gives experience points to the message author. The values are stored in a MongoDB database. Becca will only give experience points to a member once per minute. A message will generate experience points between 5 and X, where X is 25 + one tenth of the message length. Levels are earned on a sliding scale - check the Level Scale link in the navbar to see how levels are calculated. Becca will react to messages with "UP" to indicate that message generated experience points.',
   },
   {
     name: 'Command Usage Tracking',
