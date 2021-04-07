@@ -6,6 +6,7 @@ import { BotDeployComponent } from './bot-deploy/bot-deploy.component';
 import { BotSetupComponent } from './bot-setup/bot-setup.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import { DepCommandComponent } from './dep-command/dep-command.component';
+import { LevelscaleComponent } from './levelscale/levelscale.component';
 import { LocalInstanceComponent } from './local-instance/local-instance.component';
 import { ManCommandComponent } from './man-command/man-command.component';
 import { NewCommandComponent } from './new-command/new-command.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'new-cmd', component: NewCommandComponent },
   { path: 'trouble', component: TroubleComponent },
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'level-scale', component: LevelscaleComponent },
 ];
 
 @NgModule({
