@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
+import * as Sentry from '@sentry/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -17,6 +17,7 @@ import { NewCommandComponent } from './new-command/new-command.component';
 import { TroubleComponent } from './trouble/trouble.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { LevelscaleComponent } from './levelscale/levelscale.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,25 @@ import { LevelscaleComponent } from './levelscale/levelscale.component';
     PrivacyComponent,
     LevelscaleComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => () => {},
+      deps: [Sentry.TraceService],
+      multi: true,
+    },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
