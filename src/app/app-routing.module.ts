@@ -15,8 +15,7 @@ import { TroubleComponent } from './trouble/trouble.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
-  { path: 'welcome', component: WelcomeComponent },
+  { path: '', component: WelcomeComponent, pathMatch: 'full' },
   { path: 'local', component: LocalInstanceComponent },
   { path: 'setup', component: BotSetupComponent },
   { path: 'deploy', component: BotDeployComponent },
