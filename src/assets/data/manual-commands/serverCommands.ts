@@ -44,7 +44,7 @@ export const serverCommands: CommandInt[] = [
   {
     name: 'role',
     description:
-      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, Becca will add or remove the role from the user. Optionally pass `listall` instead and receive a list of self-assignable roles for that server.',
+      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, Becca will add or remove the role from the user. If the <code>role</code> parameter is omitted, Becca will return a list of self-assignable roles.',
     parameters: '[role]',
   },
   {
