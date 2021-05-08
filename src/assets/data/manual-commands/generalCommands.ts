@@ -53,6 +53,11 @@ export const generalCommands: CommandInt[] = [
       'This command returns a motivational quote to raise your spirits. Quotes are obtained from freeCodeCamp.',
   },
   {
+    name: 'orbit',
+    description:
+      'This command returns our global cross-platform community leaderboard.',
+  },
+  {
     name: 'search',
     description:
       'This command returns a URL to the Google search results page for the given [query] word or words.',
@@ -70,7 +75,7 @@ export const generalCommands: CommandInt[] = [
   },
   {
     name: 'starcount',
-    description: `This command sends an embed to the channel. contains the top ten (or less) users in the server, sorted by the number of stars they have been given. The command also includes the caller's rank.`
+    description: `This command sends an embed to the channel. contains the top ten (or less) users in the server, sorted by the number of stars they have been given. The command also includes the caller's rank.`,
   },
   {
     name: 'user',
