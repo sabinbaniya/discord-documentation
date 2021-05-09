@@ -16,7 +16,8 @@ export const serverCommands: CommandInt[] = [
   },
   {
     name: 'leaderboard',
-    description: 'Generates an embed containing the top ten users (by points) in the server, and the level + rank of the user who called the command.'
+    description:
+      'Generates an embed containing the top ten users (by points) in the server, and the level + rank of the user who called the command.',
   },
   {
     name: 'level',
@@ -25,7 +26,8 @@ export const serverCommands: CommandInt[] = [
   },
   {
     name: 'levelscale',
-    description: 'This command returns a set of embeds containing the breakdown for the level scale.'
+    description:
+      'This command returns a set of embeds containing the breakdown for the level scale.',
   },
   {
     name: 'list',
@@ -39,7 +41,13 @@ export const serverCommands: CommandInt[] = [
   },
   {
     name: 'resetlevel',
-    description: 'This command resets the level data for the server. The command requires the <code>MANAGE_SERVER</code> permission. Becca will clear all level data and set every user back to 0 points.'
+    description:
+      'This command resets the level data for the server. The command requires the <code>MANAGE_SERVER</code> permission. Becca will clear all level data and set every user back to 0 points.',
+  },
+  {
+    name: 'resetstar',
+    description:
+      'This command resets the star counts for the server. The command requires the <code>MANAGE_SERVER</code> permission. Becca will clear all of the star counts.',
   },
   {
     name: 'role',
@@ -53,7 +61,8 @@ export const serverCommands: CommandInt[] = [
   },
   {
     name: 'suggest',
-    description: 'Sends your suggestion to the server suggestions channel. If one is not configured, rejects the command. No special formatting is required for the suggestion parameter - Becca will use all of the text following the command itself.',
-    parameters: '[suggestion]'
-  }
+    description:
+      'Sends your suggestion to the server suggestions channel. If one is not configured, rejects the command. No special formatting is required for the suggestion parameter - Becca will use all of the text following the command itself.',
+    parameters: '[suggestion]',
+  },
 ];
