@@ -32,7 +32,7 @@ export const serverCommands: CommandInt[] = [
   {
     name: 'list',
     description:
-      'This command returns embed(s) containing a list of the servers Becca is in, and the owner information for each server.',
+      'This command returns embed(s) containing a list of the servers Becca is in, and the owner information for each server. This command is restricted to the bot owner only.',
   },
   {
     name: 'ping',
