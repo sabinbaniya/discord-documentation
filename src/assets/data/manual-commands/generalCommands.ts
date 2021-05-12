@@ -13,6 +13,12 @@ export const generalCommands: CommandInt[] = [
     parameters: '[feature]',
   },
   {
+    name: 'colour',
+    description:
+      'This command takes a `hex` value (without the # symbol) and returns an embed containing a sample of that hex colour.',
+    parameters: '[hex]',
+  },
+  {
     name: 'compliment',
     description:
       'Provides a little compliment to cheer you up. Compliments obtained from freeCodeCamp.',
