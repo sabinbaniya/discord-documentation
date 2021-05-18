@@ -65,4 +65,10 @@ export const serverCommands: CommandInt[] = [
       'Sends your suggestion to the server suggestions channel. If one is not configured, rejects the command. No special formatting is required for the suggestion parameter - Becca will use all of the text following the command itself.',
     parameters: '[suggestion]',
   },
+  {
+    name: 'suggestion',
+    description:
+      'Either approves or denies the suggestion in the message ID. Updates the embed with the approval/denial, the moderator who took the action, and the reason (if provided). This command requires the Manage Server permission.',
+    parameters: '[approve|deny] [message_id] [?reason]',
+  },
 ];
