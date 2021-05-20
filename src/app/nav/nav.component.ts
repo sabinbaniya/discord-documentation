@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { version } from '../../../package.json';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +6,6 @@ import { version } from '../../../package.json';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-  version = '0.0.0';
   constructor() {}
-  ngOnInit(): void {
-    this.version = version;
-  }
+  ngOnInit(): void {}
 }
