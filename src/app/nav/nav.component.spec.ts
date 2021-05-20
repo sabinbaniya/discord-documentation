@@ -1,10 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { version } from '../../../package.json';
 
 import { NavComponent } from './nav.component';
 
 const navLinkText = [
-  `Version ${version}`,
   'Create a Local Instance',
   'Set up the Code',
   'Deploy the Code',
@@ -44,14 +42,6 @@ describe('NavComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy('nav component does not build');
-  });
-
-  it('should have the correct properties', () => {
-    expect(component.version).toBeTruthy('missing version property');
-    expect(component.version).toBe(
-      version,
-      'does not have correct version value'
-    );
   });
 
   it('should render the title', () => {
