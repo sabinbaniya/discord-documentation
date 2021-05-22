@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { botCommands } from 'src/assets/data/manual-commands/botCommands';
-import { emoteCommands } from 'src/assets/data/manual-commands/emoteCommands';
 import { gameCommands } from 'src/assets/data/manual-commands/gameCommands';
 import { generalCommands } from 'src/assets/data/manual-commands/generalCommands';
 import { moderationCommands } from 'src/assets/data/manual-commands/moderationCommands';
@@ -36,13 +35,6 @@ describe('ManCommandComponent', () => {
       botCommands.length,
       'incorrect bot commands value'
     );
-    expect(component.emoteCommands).toBeTruthy(
-      'missing emoteCommands property'
-    );
-    expect(component.emoteCommands.length).toEqual(
-      emoteCommands.length,
-      'incorrect emoteCommands value'
-    );
     expect(component.gameCommands).toBeTruthy('missing gameCommands property');
     expect(component.gameCommands.length).toEqual(
       gameCommands.length,
@@ -74,30 +66,6 @@ describe('ManCommandComponent', () => {
   it('should render a bot command correctly', () => {
     const commandData = botCommands[0];
     const rendered = compiled.querySelector('.bot-command');
-    expect(rendered.querySelector('code').textContent).toContain(
-      commandData.name,
-      'does not render command name'
-    );
-    if (commandData.parameters) {
-      expect(rendered.querySelectorAll('span')[0].textContent).toBe(
-        ' ' + commandData.parameters,
-        'does not render commandData parameters'
-      );
-      expect(rendered.querySelectorAll('span')[1].textContent).toBe(
-        commandData.description,
-        'does not render commandData description'
-      );
-    } else {
-      expect(rendered.querySelector('span').textContent).toBe(
-        commandData.description,
-        'does not render description'
-      );
-    }
-  });
-
-  it('should render an emote command correctly', () => {
-    const commandData = emoteCommands[0];
-    const rendered = compiled.querySelector('.emote-command');
     expect(rendered.querySelector('code').textContent).toContain(
       commandData.name,
       'does not render command name'
@@ -217,7 +185,6 @@ describe('ManCommandComponent', () => {
 
   it('should render all commands', () => {
     const bot = compiled.querySelectorAll('.bot-command');
-    const emote = compiled.querySelectorAll('.emote-command');
     const game = compiled.querySelectorAll('.game-command');
     const general = compiled.querySelectorAll('.general-command');
     const mod = compiled.querySelectorAll('.moderation-command');
@@ -225,10 +192,6 @@ describe('ManCommandComponent', () => {
     expect(bot.length).toEqual(
       botCommands.length,
       'does not render all bot commands'
-    );
-    expect(emote.length).toEqual(
-      emoteCommands.length,
-      'does not render all emote commands'
     );
     expect(game.length).toEqual(
       gameCommands.length,

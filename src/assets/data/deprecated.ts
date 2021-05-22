@@ -59,31 +59,37 @@ export const depCommands: DepCommandInt[] = [
   {
     name: 'contributors',
     version: '10.2.5',
-    reason: 'Removal of all-contributors integration, issues with http request.'
+    reason:
+      'Removal of all-contributors integration, issues with http request.',
   },
   {
     name: 'adventure',
     version: '11.4.0',
-    reason: 'Removed due to noops API outages and unreliability.'
+    reason: 'Removed due to noops API outages and unreliability.',
   },
   {
     name: 'challenge',
     version: '11.4.0',
-    reason: 'Removed due to noops API outages and unreliability.'
+    reason: 'Removed due to noops API outages and unreliability.',
   },
   {
     name: 'maze',
     version: '11.4.0',
-    reason: 'Removed due to noops API outages and unreliability.'
+    reason: 'Removed due to noops API outages and unreliability.',
   },
   {
     name: 'riddle',
     version: '11.4.0',
-    reason: 'Removed due to noops API outages and unreliability.'
+    reason: 'Removed due to noops API outages and unreliability.',
   },
   {
     name: 'title',
     version: '11.4.0',
-    reason: 'Removed due to noops API outages and unreliability.'
-  }
+    reason: 'Removed due to noops API outages and unreliability.',
+  },
+  {
+    name: 'Emote Commands (boop, hug, tickle)',
+    version: '13.0.0',
+    reason: `Removed during a refactor of Becca's personality.`,
+  },
 ];
