@@ -3,13 +3,8 @@
   "version": "13.0.0",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test --no-watch --browsers=ChromeHeadlessCI",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng deploy"
+    "lint": "markdownlint ./docs/**/*.md",
+    "start": "docsify serve ./docs -o --port 3200"
   },
   "private": true,
   "engines": {
@@ -17,7 +12,10 @@
     "npm": "^7.13.0"
   },
   "dependencies": {
+    "docsify-cli": "^4.4.3"
   },
   "devDependencies": {
+    "markdownlint": "^0.23.1",
+    "markdownlint-cli": "^0.27.1"
   }
 }
