@@ -10,6 +10,9 @@ Once you have signed in to GitHub, navigate to our [GitHub repository](https://g
 
 ## Install the Necessary Software
 
+> [!TIP]
+> Some of the tooling relies on a UNIX based environment. If you are developing on Windows, we recommend using Git Bash or WSL2 to avoid errors.
+
 Using your preferred development environment (if you do not have one, we recommend either Visual Studio Code (VSCode) or Atom), load the directory containing your copy of Becca's files.
 
 Before you do anything else, make sure that Node.js and npm are installed. If you do not have Node.js and npm installed, you can do so from the Node.js website. You should be running Node.js version 16.2.0 or higher, and npm version 7.6.0 or higher. Open the terminal - you will now need to install some packages using npm. Enter the following commands into the terminal to perform the installations:
