@@ -19,3 +19,27 @@ This page documents former features which have been deprecated, including the ve
 - `riddle` *(deprecated in 11.4.0)* - Removed due to noops API outages and unreliability.
 - `title` *(deprecated in 11.4.0)* - Removed due to noops API outages and unreliability.
 - `Emote Commands` *(boop, hug, tickle) (deprecated in 13.0.0)* - Removed during a refactor of Becca's personality.
+- `listeners` command *(deprecated in 14.0.0)* - Removed as extraneous, listeners are documented here.
+- `support` command *(deprecated in 14.0.0)* - Rolled in to the `help` command.
+- `levelscale` command *(deprecated in 14.0.0)* - Available in the docs, removed to prevent noise in the channel where the command is called.
+- `close` command *(deprecated in 14.0.0)* - Removed as unneeded with refactor of `mute/unmute` logic.
+- `moderator_role` config setting *(deprecated in 14.0.0)* - Removed as unneeded with refactor of `mute/unmute` logic.
+- `compliment` command *(deprecated in 14.0.0)* - Data was not always logical.
+- `echo` command *(deprecated in 14.0.0)* - Was restricted to bot owner and unused.
+- `jobs` command *(deprecated in 14.0.0)* - Poorly written, not worth the overhead for refactoring.
+- `maths` command *(deprecated in 14.0.0)* - Unused, allowed for removal of dependency.
+- `search` command *(deprecated in 14.0.0)* - Poorly written, not worth the overhead for refactoring.
+- `dnd` commands *(deprecated in 14.0.0)* - Poorly written, not worth the overhead for refactoring.
+- `pokemon` command *(deprecated in 14.0.0)* - Poorly written, not worth the overhead for refactoring.
+- `fortune` command *(deprecated in 14.0.0)* - Removed due to lack of data needed for functionality.
+- `kirby` command *(deprecated in 14.0.0)* - Lack of use.
+- `piglating` command *(deprecated in 14.0.0)* - Extraneous, lack of use.
+- `roll` command *(deprecated in 14.0.0)* - Extraneous, lack of use.
+
+## Temporary Deprecations
+
+These features have been temporarily removed, but are planned for a future version.
+
+- `github` command *(deprecated in 14.0.0)* - May restore in a future version after implementing proper ratelimiting.
+- `wiki` command *(deprecated in 14.0.0)* - May restore in a future version using the Wikipedia API.
+- `habitica` command *(deprecated in 14.0.0)* - Removed due to cognitive complexity, may restore with a new approach.
