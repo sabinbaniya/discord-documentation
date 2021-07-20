@@ -10,9 +10,7 @@ You need to configure Becca's settings using the becca!config command.
 
 - `becca!config set suggestion_channel [#channel]`: This is the channel where Becca will send suggestions to. Using reactions she adds, users can then upvote/downvote suggestions.
 
-- `becca!config set restricted_role [@role]`: This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.
-
-- `becca!config set moderator_role [@role]`: This command sets the name of your server's moderation role. This should be your lowest moderation level, as all moderators will need this role to see the suspended channels.
+- `becca!config set muted_role [@role]`: This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.
 
 - `becca!config set hearts [@user]`: This command adds the id of the user mentioned to the hearts list - Becca automatically adds a heart react to the messages of that user. If that user is already set to receive hearts, she will remove that user instead.
 
