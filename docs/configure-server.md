@@ -8,6 +8,8 @@ You need to configure Becca's settings using the becca!config command.
 
 - `becca!config set welcome_channel [#channel]`: This command allows you to set the name of the channel for user welcome/depart messages.
 
+- `becca!config set level_channel [#channel]`: Setting this to a text channel in your server means Becca will send all level up notifications to that channel. When this is not set, she will send the notification in the same channel as the message that triggered the level up.
+
 - `becca!config set suggestion_channel [#channel]`: This is the channel where Becca will send suggestions to. Using reactions she adds, users can then upvote/downvote suggestions.
 
 - `becca!config set muted_role [@role]`: This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.
