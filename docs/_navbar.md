@@ -3,6 +3,7 @@
 - [Create A Local Instance](/create-local.md)
 - [Set Up The Code](/setup-code.md)
 - [Deploy the Code](/deploy-code.md)
+- [Set Permissions](/set-permissions.md)
 - [Configure Your Server](/configure-server.md)
 - [Automatic Commands](/automatic-commands.md)
 - [Manual Commands](/manual-commands.md)
