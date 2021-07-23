@@ -63,6 +63,7 @@ These commands are related to server information or data.
 - `leaderboard` - Generates an embed containing the top ten users (by points) in the server, and the level + rank of the user who called the command.
 - `level` - This command sends an embed containing the message author's level and current experience points.
 - `list` - This command returns embed(s) containing a list of the servers Becca is in, and the owner information for each server. This command is restricted to the bot owner only.
+- `permissioncheck` - This command is locked to the `Manage Server` permission. When you run this command, Becca will check if she has the required permissions in the channel the command is used in, as well as at the server level. Becca will report the permissions she checked, the results for each permission, and a notice whether things need fixed or not.
 - `resetlevel` - This command resets the level data for the server. The command requires the "Manage Server" permission. Becca will clear all level data and set every user back to 0 points.
 - `resetstar` - This command resets the star counts for the server. The command requires the "Manage Server" permission. Becca will clear all of the star counts.
 - `role [role]` - This command accepts the name or Discord ID of a role as `[role]`. If that role exists and is in the server `self_roles` list, Becca will add or remove the role from the user. If the role parameter is omitted, Becca will return a list of self-assignable roles.
