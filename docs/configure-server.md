@@ -29,6 +29,22 @@ You need to configure Becca's settings using the becca!config command.
 > [!NOTE]
 > Config settings are set on a per-server basis. Only moderators with the "Manage Server" permission can change the settings.
 
+## Link Detection
+
+Becca offers link detection as an auto-moderation feature, also managed through the config command.
+
+Link detection will not affect messages sent by members with the `Manage Messages` permission.
+
+- `becca!config set anti_link [#channel]`: This sets the channels where messages containing links will be automatically deleted. Use a `#channel` tag to add a single channel, or use `all` to enable it globally.
+
+- `becca!config set permit_links [#channel]`: This sets the channels where links will *not* be automatically deleted - if you set `anti_link` to all, you can allow specific channels still with this config.
+
+- `becca!config set link_roles [@role]`: This sets roles as immune to link moderation - you can use this to identify regulars by a role and allow them to still send links, for example.
+
+- `becca!config set allowed_links [text]`: This command is for advanced users! You can pass a JavaScript RegExp syntax string to `text` to add a valid domain. For example, if you wanted to allow your members to share links from GitHub, you would use `becca!config set allowed_links github\.com`. Becca will not delete links that match a RegExp you provide here.
+
+- `becca!config set link_message [...text]`: This allows you to set a custom message Becca will send when she deletes a link.
+
 ## Viewing Your Config
 
 You can view most of your configuration settings with `becca!config view`. The three exceptions to that are `hearts`, `self_roles`, and `blocked`. These three are each viewed individually due to the potential length.
