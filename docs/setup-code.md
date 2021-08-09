@@ -24,8 +24,7 @@ These values are necessary for the overall operation of the bot.
 - `DISCORD_TOKEN` (REQUIRED) - The value of this variable will be your Token from the Discord developer page. It is VERY important that you keep this token a secret - do not upload it to GitHub or share it publicly, as this will allow anyone to access your Discord Bot application.
 - `MONGODB` (REQUIRED) - The value of this variable will be your MongoDB authentication URI. Like the token, this needs to be kept secret to prevent unauthorised access to and modification of your database.
 - `NODE_ENV` (REQUIRED) - This tells Becca whether she is in a development state or production state - the webhook message includes this value. Set this to `development` when working locally, and `production` if you are running your own instance.
-- `WH_ID` (REQUIRED) - This is the ID for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error.
-- `WH_TOKEN` (REQUIRED) - This is the token for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error.
+- `WH_URL` (REQUIRED) - This is the URL for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error.
 
 These values are necessary for specific commands.Using an invalid value will prevent certain commands from functioning.
 
@@ -43,11 +42,6 @@ These values are optional and will fall back to standard Unicode characters if n
 - `BECCA_NO` (OPTIONAL) - This is the ID or Unicode character for the emoji Becca will react with on failed/errored command calls.
 - `BECCA_LOVE` (OPTIONAL) - This is the ID or Unicode character for the emoji Becca will use for the hearts listener.
 - `BECCA_THINK` (OPTIONAL) - This is the ID or Unicode character for the emoji Becca will react with when she is @mentioned.
-
-These values are required for the database encryption.
-
-- `ENCRYPTION_KEY` (REQUIRED) - This is a 32-Byte Base64 string used to encrypt database entries. Generate this with openssl rand -base64 32.
-- `SIGINING_KEY` (REQUIRED) - This is a 64-Byte Base64 string used to authenticate database entries. Generate this with openssl rand -base64 64.
 
 This is required for the Sentry logging.
 
