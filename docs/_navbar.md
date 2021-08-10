@@ -9,7 +9,6 @@
 - [Manual Commands](/manual-commands.md)
 - [Deprecated Features](/deprecated-features.md)
 - [Contribute to Becca Lyria](/contribute.md)
-- [Create a New Command](/create-new-command.md)
 - [Level Scale](/level-scale.md)
 - [Privacy Policy](/privacy-policy.md)
 

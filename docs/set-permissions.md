@@ -5,16 +5,27 @@ Discord's permission system is very powerful, but can also be very confusing.
 By default, when you invite Becca to your server she will ask for the following permissions:
 
 - Manage Server
+
 - Manage Roles
+
 - Manage Channels
+
 - Kick Members
+
 - Ban Members
+
 - Read Messages
+
 - Send Messages
+
 - Manage Messages
+
 - Embed Links
+
 - Attach Files
+
 - Read Message History
+
 - Add Reactions
 
 All of these permissions are necessary for her features to work. Disabling any of these will cause unexpected errors to occur.
@@ -27,13 +38,13 @@ In this case, the role would be named `Becca Lyria`. Any changes to the permissi
 
 ## Role Hierarchy
 
-One of Becca's features is a configurable list of roles your server members can assign/unassign for themselves. In order for Becca to be able to manage these roles, the integration role must be *higher* than **all** of the self-assignable roles in your server permissions list.
+One of Becca's features is a configurable list of roles your server members can assign/unassign for themselves. In order for Becca to be able to manage these roles, the integration role must be _higher_ than **all** of the self-assignable roles in your server permissions list.
 
 ## Channel Overrides
 
 There is a good chance you have specific channel permissions in your server. An example of this would be a `staff-chat` channel that only moderators can see.
 
-If you disable any permissions on a channel for the `@everyone` role, they *must* be explicitly granted on that channel to Becca's integration role. Failing to do this can lead to unexpected behaviour.
+If you disable any permissions on a channel for the `@everyone` role, they _must_ be explicitly granted on that channel to Becca's integration role. Failing to do this can lead to unexpected behaviour.
 
 ## Validating Permissions
 
