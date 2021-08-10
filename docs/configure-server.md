@@ -4,7 +4,7 @@ You need to configure Becca's settings using the becca!config command.
 
 - `becca!config set prefix [prefix]`: This command determines what symbol Becca looks for to trigger a command. The default is becca!, but you may change this to whatever you wish. Note that uppercase characters will be stored as lowercase, to allow Becca to respond to either casing.
 
-- `becca!config set log_channel [#channel]`: This command determines the name of the channel where Becca should log things like deleted messages, and kick/ban instances.
+- `becca!config set log_channel [#channel]`: This command determines the name of the channel where Becca should log things like deleted messages, and kick/ban instances. If you have membership screening enabled, Becca will also send a notice to this channel when someone joins your server but has not completed the screening.
 
 - `becca!config set welcome_channel [#channel]`: This command allows you to set the name of the channel for user welcome/depart messages.
 
@@ -18,13 +18,15 @@ You need to configure Becca's settings using the becca!config command.
 
 - `becca!config set blocked [@user]`: This command adds the id of the user mentioned to the blocked list. Becca will refuse command access to users in the block list. If the user is already present, she will remove them instead.
 
-- `becca!config set thanks [`on`/`off`]`: This command will turn the thanks listener on and off.
+- `becca!config set thanks [on/off]`: This command will turn the thanks listener on and off.
 
-- `becca!config set levels [`on`/`off`]`: This command will turn the levels listener on and off.
+- `becca!config set levels [on/off]`: This command will turn the levels listener on and off.
 
 - `becca!config set custom_welcome [message]:` This command will set a custom welcome message for your server. The value of [message] can be a standard sentence, and supports Discord markup - but must be kept under 1000 characters. Additionally, a couple of special strings will be replaced: `{@username}` will be replaced with the username of the new member, and `{@servername}` will be replaced with your server's name.
 
 - `becca!config set self_roles [@role]`: This command will add or remove a role from the self-assignable list (for use with the role command).
+
+- `becca!config set join_role [@role]`: This command will set a role that Becca will assign to members when they join your server. If you have membership screening enabled, Becca will not assign the role until the user completes the screening.
 
 > [!NOTE]
 > Config settings are set on a per-server basis. Only moderators with the "Manage Server" permission can change the settings.
@@ -43,7 +45,7 @@ Link detection will not affect messages sent by members with the `Manage Message
 
 - `becca!config set allowed_links [text]`: This command is for advanced users! You can pass a JavaScript RegExp syntax string to `text` to add a valid domain. For example, if you wanted to allow your members to share links from GitHub, you would use `becca!config set allowed_links github\.com`. Becca will not delete links that match a RegExp you provide here.
 
-- `becca!config set link_message [...text]`: This allows you to set a custom message Becca will send when she deletes a link.
+- `becca!config set link_message [...text]`: This allows you to set a custom message Becca will send when she deletes a link. Becca sends this message as an embed, so in your text you can use `{@username}` to represent a mention of that user - embed mentions do not ping the user.
 
 ## Viewing Your Config
 
