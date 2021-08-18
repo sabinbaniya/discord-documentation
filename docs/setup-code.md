@@ -35,13 +35,13 @@ These values are necessary for specific commands.Using an invalid value will pre
 
 - `NASA_API` (OPTIONAL) - This is the API key for the NASA API
 
-- `HABITICA_KEY` (OPTIONAL) - This is your API key for Habitica.
-
-- `ORBIT_KEY` (OPTIONAL) - This is your API key for the Orbit.Love dashboard.
-
-This value grants you owner privileges on your bot instance. Set this to your Discord ID.
+These values are Discord values required for the slash commands.
 
 - `OWNER_ID` (OPTIONAL) - This tells Becca which Discord account is her owner. She will respond just a little differently to the owner. Leaving this blank WILL lock out some commands.
+
+- `CLIENT_ID` (REQUIRED) - This tells Discord which application to attach slash commands to. It should be set to your bot's ID.
+
+- `HOME_GUILD_ID` (REQUIRED) - If you are developing locally, you'll want to set this to your server's ID. This tells Discord where to register slash commands on the guild level. Guild commands update instantly (global commands update every hour) which makes this ideal for development testing.
 
 These values are optional and will fall back to standard Unicode characters if not present.
 
