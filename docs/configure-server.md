@@ -1,60 +1,38 @@
 # Configure your Server
 
-You need to configure Becca's settings using the becca!config command.
+The `/config set` slash command will allow you to configure Becca's features and behaviour for your server.
 
-- `becca!config set prefix [prefix]`: This command determines what symbol Becca looks for to trigger a command. The default is becca!, but you may change this to whatever you wish. Note that uppercase characters will be stored as lowercase, to allow Becca to respond to either casing.
-
-- `becca!config set log_channel [#channel]`: This command determines the name of the channel where Becca should log things like deleted messages, and kick/ban instances. If you have membership screening enabled, Becca will also send a notice to this channel when someone joins your server but has not completed the screening.
-
-- `becca!config set welcome_channel [#channel]`: This command allows you to set the name of the channel for user welcome/depart messages.
-
-- `becca!config set level_channel [#channel]`: Setting this to a text channel in your server means Becca will send all level up notifications to that channel. When this is not set, she will send the notification in the same channel as the message that triggered the level up.
-
-- `becca!config set suggestion_channel [#channel]`: This is the channel where Becca will send suggestions to. Using reactions she adds, users can then upvote/downvote suggestions.
-
-- `becca!config set muted_role [@role]`: This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.
-
-- `becca!config set hearts [@user]`: This command adds the id of the user mentioned to the hearts list - Becca automatically adds a heart react to the messages of that user. If that user is already set to receive hearts, she will remove that user instead.
-
-- `becca!config set blocked [@user]`: This command adds the id of the user mentioned to the blocked list. Becca will refuse command access to users in the block list. If the user is already present, she will remove them instead.
-
-- `becca!config set thanks [on/off]`: This command will turn the thanks listener on and off.
-
-- `becca!config set levels [on/off]`: This command will turn the levels listener on and off.
-
-- `becca!config set custom_welcome [message]:` This command will set a custom welcome message for your server. The value of [message] can be a standard sentence, and supports Discord markup - but must be kept under 1000 characters. Additionally, a couple of special strings will be replaced: `{@username}` will be replaced with the username of the new member, and `{@servername}` will be replaced with your server's name.
-
-- `becca!config set self_roles [@role]`: This command will add or remove a role from the self-assignable list (for use with the role command).
-
-- `becca!config set join_role [@role]`: This command will set a role that Becca will assign to members when they join your server. If you have membership screening enabled, Becca will not assign the role until the user completes the screening.
+| Setting                | Value                          | Description                                                                                                                                                                                                |
+| ---------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Allowed Link Channels  | `channel: Channel`             | This will add or remove the `channel` to the list of channels to _not_ auto-delete links in.                                                                                                               |
+| Allowed Link Regex     | `regex: string`                | This will add a regex that prevents links from being deleted if they match.                                                                                                                                |
+| Allowed Link Roles     | `role: Role`                   | This will prevent deleting links for members who have the `role`.                                                                                                                                          |
+| Anti-link Channels     | `channel: Channel`             | This will tell Becca to automatically delete messages containing links for that channel. Use `all` to turn this on for every channel.                                                                      |
+| Blocked Users          | `user: User`                   | This will prevent the `user` from using any of Becca's commands.                                                                                                                                           |
+| Custom Leave Message   | `message: string`              | This will set the message to be sent when a user leaves your server. In the message, `{@username}` will be replaced with the user's mention, and `{@servername}` will be replaced with your server's name. |
+| Custom Welcome Message | `message: string`              | This will set the message to be sent when a user joins your server. In the message, `{@username}` will be replaced with the user's mention, and `{@servername}` will be replaced with your server's name.  |
+| Heart Users            | `user: User`                   | This will add or remove the `user` to the list of people who receive heart reactions on their messages.                                                                                                    |
+| Join/Leave Channel     | `channel: Channel`             | This will tell Becca where to send messages when users join or leave your server.                                                                                                                          |
+| Level Log Channel      | `channel: Channel`             | This will tell Becca where to send messages when a user levels up or earns a level role.                                                                                                                   |
+| Level System           | `on \| off`                    | This will enable or disable the level system.                                                                                                                                                              |
+| Level-Assigned Roles   | `level: number`, `role: @role` | This will tell Becca to give users the `role` when they reach the `level`.                                                                                                                                 |
+| Link Delete Message    | `message: string`              | This tells Becca what message to send when she deletes a link.                                                                                                                                             |
+| Moderation Log Channel | `channel: Channel`             | This tells Becca where to send logs of moderation activities.                                                                                                                                              |
+| Muted Role             | `role: Role`                   | When using the `mute` and `unmute` commands, this is the `role` that will be added or removed. To make this effective, you should ensure `role` does not have permissions to send messages in channels.    |
+| Role on Join           | `role: Role`                   | Becca will assign this `role` when a member joins your server. If you have membership screening enabled, she will not assign the `role` until they complete it.                                            |
+| Self-Assignable Roles  | `role: Role`                   | Adds or removes the `role` to the list that members can assign themselves.                                                                                                                                 |
+| Suggestion Channel     | `channel: Channel`             | Sets the channel where suggestions made with the `suggest` command are sent.                                                                                                                               |
+| Thanks System          | `on \| off`                    | Enables or disables the feature where Becca recognises people who are thanked.                                                                                                                             |
 
 > [!NOTE]
 > Config settings are set on a per-server basis. Only moderators with the "Manage Server" permission can change the settings.
 
-## Link Detection
+## Resetting a Setting
 
-Becca offers link detection as an auto-moderation feature, also managed through the config command.
-
-Link detection will not affect messages sent by members with the `Manage Messages` permission.
-
-- `becca!config set anti_link [#channel]`: This sets the channels where messages containing links will be automatically deleted. Use a `#channel` tag to add a single channel, or use `all` to enable it globally.
-
-- `becca!config set permit_links [#channel]`: This sets the channels where links will *not* be automatically deleted - if you set `anti_link` to all, you can allow specific channels still with this config.
-
-- `becca!config set link_roles [@role]`: This sets roles as immune to link moderation - you can use this to identify regulars by a role and allow them to still send links, for example.
-
-- `becca!config set allowed_links [text]`: This command is for advanced users! You can pass a JavaScript RegExp syntax string to `text` to add a valid domain. For example, if you wanted to allow your members to share links from GitHub, you would use `becca!config set allowed_links github\.com`. Becca will not delete links that match a RegExp you provide here.
-
-- `becca!config set link_message [...text]`: This allows you to set a custom message Becca will send when she deletes a link. Becca sends this message as an embed, so in your text you can use `{@username}` to represent a mention of that user - embed mentions do not ping the user.
+The `/config reset` command will take any of the above options and reset it to the default value.
 
 ## Viewing Your Config
 
-You can view most of your configuration settings with `becca!config view`. The three exceptions to that are `hearts`, `self_roles`, and `blocked`. These three are each viewed individually due to the potential length.
+The `/config view` command will display the values for the given setting. Choosing `Global Settings` will show all of your values, with the following settings being represented by the number of entries for that setting. These settings can be selected individually to see those entries:
 
-To view one of these, use `becca!config view <setting>`. For example, to view your self-assignable roles you'd use `becca!config view self_roles`.
-
-These lists are also paginated, so you can pass a page number to view that specific page such as `becca!config view self_roles 2`.
-
-## Resetting a Setting
-
-If you want to reset any of the settings to their default values, run `becca!config reset <setting_name>`.
+`Allowed Link Channels`, `Allowed Link Regex`, `Anti-link Channels`, `Blocked Users`, `Heart Users`, `Level-assigned Roles`, `Self-assigned Roles`.

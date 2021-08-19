@@ -68,6 +68,10 @@ This page documents former features which have been deprecated, including the ve
 
 - `roll` command _(deprecated in 14.0.0)_ - Extraneous, lack of use.
 
+- `orbit` command _(deprecated in 16.0.0)_ - Privacy concerns.
+
+- `guess` command _(deprecated in 16.0.0)_ - Did not migrate well to slash commands.
+
 ## Temporary Deprecations
 
 These features have been temporarily removed, but are planned for a future version.
