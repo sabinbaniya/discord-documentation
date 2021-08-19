@@ -1,111 +1,112 @@
 # Manual Commands
 
-These commands are run manually by sending the prefix and the associated command keyword (listed below) and arguments.
+Becca's primary command system has been migrated to use Discord's new slash interface. To bring up the command menu, type `/`. You can then see available commands for each bot in your server, as well as the built-in Discord features.
 
-## Bot Commands
+## Becca Commands
 
-These commands are related to Becca's information, development, or functionality.
+The `/becca` commands relate to information about Becca herself.
 
-- `about` - This command generates an embed message that provides a link to Becca's source code, the date she was created, the number of commands she can perform, and her favourite colour. The embed is sent to the channel the command message came from.
+| Command  | Parameters | Description                                                     |
+| -------- | ---------- | --------------------------------------------------------------- |
+| `about`  | `null`     | Returns details about Becca's bot instance.                     |
+| `art`    | `null`     | Returns an art sample from Becca's gallery.                     |
+| `becca`  | `null`     | Returns a link to Becca's profile page.                         |
+| `donate` | `null`     | Returns information on donating to support Becca's development. |
+| `help`   | `null`     | Provides a series of links explaining how to use Becca.         |
+| `invite` | `null`     | Provides a link to invite Becca to a server.                    |
+| `ping`   | `null`     | Returns Becca's response time to commands.                      |
+| `uptime` | `null`     | Returns the time since Becca came online.                       |
 
-- `art` - This command returns an embed containing a Becca art! Many thanks to our wonderful artist contributors.
+## Code Commands
 
-- `bugreport` - This command returns an embed containing a link to the GitHub issue selection page.
+The `/code` commands contain tools that may be helpful to developers.
 
-- `help [?command]` - This command returns an embed containing a list of available commands. If the optional `[command]` parameter is passed, Becca will return the description for that command (or an error, if that command does not exist).
+| Command   | Parameters        | Description                                                                                            |
+| --------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| `caniuse` | `feature: string` | Provides a breakdown of browser support for the given `feature`.                                       |
+| `colour`  | `hex: string`     | Generates an embed depicting the given `hex` colour. `hex` must be a valid 6-digit hexadecimal string. |
+| `http`    | `status: number`  | Returns a cute cat image depicting the given `status` code.                                            |
 
-- `invite` - This command returns an embed containing the link to invite Becca to a Discord server.
+## Community Commands
 
-- `ping` - This command will generate the latency for Becca. She will send a response back with the communication time in milliseconds.
+The `/community` commands offer a variety of tools for engaging with your community.
 
-- `privacy` - This command provides information on Becca's privacy policy.
+| Command       | Parameters                                            | Description                                                                                                                                                     |
+| ------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `leaderboard` | `null`                                                | Returns the server's leaderboard, provided the level system is enabled.                                                                                         |
+| `level`       | `user?: User`                                         | Returns your current level information, or the `user`'s level information.                                                                                      |
+| `motivation`  | `null`                                                | Gives a motivational quote.                                                                                                                                     |
+| `role`        | `role?: Role`                                         | If `role` is provided, and is configured as self-assignable, adds/removes the role from you. If not provided, returns a list of self-assignable roles.          |
+| `schedule`    | `time: number`, `channel: Channel`, `message: string` | Provided you have permission to do so, schedules your `message` to be sent in the `channel` after `time` minutes have passed.                                   |
+| `server`      | `null`                                                | Returns detailed information about the current Discord server.                                                                                                  |
+| `star`        | `user: User`, `reason: string`                        | Gives the `user` a shiny gold star for the given `reason`.                                                                                                      |
+| `starcount`   | `null`                                                | Generates an embed with the top ten users by number of stars received, and notes your rank on that leaderboard.                                                 |
+| `suggest`     | `suggestion: string`                                  | If the server has set up a suggestion channel, generates an embed in that channel with your `suggestion`. Adds reactions for members to vote on the suggestion. |
+| `topic`       | `null`                                                | Provides a random conversation starter.                                                                                                                         |
+| `userinfo`    | `user?: User`                                         | Returns basic information on the `user`'s (or your) Discord account.                                                                                            |
 
-- `sponsor` - This command returns an embed with the development sponsorship/donation links.
+## Config Commands
 
-- `uptime` - This command returns the amount of time Becca has currently been awake.
+The `/config` commands are used to manage the [server settings](/configure-server.md). These require the `Manage Server` permission to use. Refer to that page for the valid settings and parameters.
 
-## Game Commands
+| Command | Parameters                          | Description                                           |
+| ------- | ----------------------------------- | ----------------------------------------------------- |
+| `reset` | `setting: Setting`                  | Resets the `setting` to the default value.            |
+| `set`   | `setting: Setting`, `value: string` | Sets the `setting` to the provided `value`, if valid. |
+| `view`  | `setting: Setting`                  | Shows the current values for the `setting`.           |
 
-These commands are related to games of some sort, or are just playful commands.
+## Games Commands
 
-- `cat` - This command sends a random string of letters of a random length, to simulate a cat walking across your keyboard.
+The `/games` commands are fun and silly commands to add a bit of charm to your community.
 
-- `fact` - This command generates an embed containing a fun fact!
+| Command  | Parameters     | Description                                                                                                                                        |
+| -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fact`   | `null`         | Returns a random fun fact.                                                                                                                         |
+| `joke`   | `null`         | Returns a random joke.                                                                                                                             |
+| `mtg`    | `card: string` | Fetches and displays information on the given Magic: The Gathering `card`.                                                                         |
+| `sus`    | `null`         | Selects an Among Us colour and declares it sus!                                                                                                    |
+| `trivia` | `null`         | Stars a trivia game. Players will have 30 seconds to select an answer using the buttons. At the end of the timer, Becca will announce the winners. |
 
-- `guess` - This command starts a game of Guess the Number. Becca will generate a number between 1 and 1000. Players have ten seconds to submit guesses, then she will announce the winner based on the closest guess.
+## Manage Commands
 
-- `joke` - This command tells you a silly joke!
+The `/manage` commands help with managing your community.
 
-- `magic [cardname]` - This command queries the Magic: The Gathering API for cards that match `[cardname]`. Becca will send a message to the channel the message contains to confirm the command was received and the search was started. For each card she finds, Becca sends an embed containing the card information. She sends a notification after 30 seconds, when the search is complete. NOTE: The API can be slow to respond so this command may take some time.
+| Command      | Parameters                                                | Description                                                                                                                      |
+| ------------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `resetlevel` | `null`                                                    | Resets the level leaderboard, clearing all data.                                                                                 |
+| `resetstars` | `null`                                                    | Resets the star counts, clearing all data.                                                                                       |
+| `suggestion` | `action: approve \| deny`, `id: string`, `reason: string` | Updates the suggestion embed with the given message `id`, marking it with the `action` and stating the `reason` for that action. |
 
-- `sus` - This command sends a message embed to the channel the user called the command in. The command will say that a certain color looks sus just like in Among Us Emergency Meetings.
+## Misc Commands
 
-- `trivia` - This command fetches a trivia question and returns an embed. The question is multiple choice, and Becca will listen for answers to the question. After 30 seconds, she will display the correct answer and announce any winners.
+The `/misc` commands are things that did not fit in to any other category.
 
-- `xkcd [?number]` - This command returns an embed containing today's XKCD comic. Optionally pass a comic `[number]` to get that specific comic instead.
-
-## General Commands
-
-These are Becca's general purpose commands.
-
-- `becca` - This command returns an embed containing information on Becca's character.
-
-- `caniuse [feature]` - This command returns an embed containing the `caniuse` data on the specific programming .
-
-- `colour [hex]` - This command takes a `hex` value (with or without the # symbol) and returns an embed containing a sample of that hex colour.
-
-- `http [status]` - This command accesses the HTTP Cat API and returns a cat photo for the given `[status]`.
-
-- `motivation` - This command returns a motivational quote to raise your spirits. Quotes are obtained from freeCodeCamp.
-
-- `orbit` - This command returns our global cross-platform community leaderboard.
-
-- `space [?date (YYYY-MM-DD)]` - This command gets NASA's Space Photo of the day. Optionally pass a `[date]` to get the photo for that day instead.
-
-- `star [@username] [?reason]` - This command sends a message embed to channel. The embed contains the command author's name, the `[reason]` if provided, and a shiny gold star! Becca will track the number of stars a user receives in the server.
-
-- `starcount` - This command sends an embed to the channel. contains the top ten (or less) users in the server, sorted by the number of stars they have been given. The command also includes the caller's rank.
-
-- `userinfo [?@username]` - This command returns a message embed about the message author. The embed contains their nickname, full username, account creation date, date they joined the server, roles they have, and their avatar. Optionally pass a user mention as `[@username]` to retrieve an embed containing that user's information instead.
-
-- `username [?length]` - This command generates a DigitalOcean themed username, courtesy of MattIPv4. Optionally pass a number for `[length]` to limit the length of the username (the default value is 30).
+| Command       | Parameters        | Description                                                                                            |
+| ------------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| `permissions` | `null`            | Confirms that Becca has the correct permissions in the server and in the channel this command is used. |
+| `space`       | `date?: string`   | Returns the NASA Astronomy Photo of the Day, either from today or `date` (formatted as `YYYY-MM-DD`).  |
+| `username`    | `length?: number` | Generates a DigitalOcean themed username with a max length of `number` or 30.                          |
+| `xkcd`        | `number?: number` | Returns the latest XKCD comic, or the comic matching `number`.                                         |
 
 ## Moderation Commands
 
-These are Becca's moderation commands.
+The `/moderation` commands provide tools for moderating your community. These will all log to your moderation log channel.
 
-- `ban [@username] [?reason]` - This command requires that the user sending it has the "Ban Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command bans `[@username]` from the server. If the `becca!config set logs_channel [#channel]` option is set, Becca will send an embed to that channel. The embed will contain the name of the user performing the ban, the name of the banned user, and the reason provided. If no reason was provided, the embed will state that. This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command kicks `[@username]` from the server. If the `becca!config set log_channel [#channel]` option is set, she will send an embed to that channel. The embed will contain the name of the user performing the kick, the name of the kicked user, and the reason provided. If no reason was provided, the embed will state that.
+| Command     | Parameters                     | Description                                                                                                       |
+| ----------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| `ban`       | `user: User`, `reason: string` | Bans the `user` from the server for the given `reason`.                                                           |
+| `kick`      | `user: User`, `reason: string` | Kicks the `user` fromt he server for the given `reason`.                                                          |
+| `mute`      | `user: User`, `reason: string` | Applies the muted role to the `user` for the given `reason`, if the muted role is set.                            |
+| `unmute`    | `user: User`, `reason: string` | Removes the muted role from the `user` for the given `reason`, if the muted role is set.                          |
+| `warn`      | `user: User`, `reason: string` | Issues a warning to the `user` for the given `reason`, and adds that warning to their record.                     |
+| `warncount` | `user: User`                   | Returns the total number of warnings the `user` has received in your server, and the reason for the last warning. |
 
-- `mute [@username] [?reason]` - This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command will set the `[@username]`'s role provided in the `becca!config set muted_role [@role]` option, and remove all other roles. If the role option is not set, Becca will send a message to notify the author. If the `becca!config set log_channel [#channel]` option is not set, Becca will send a message to notify the author. Otherwise, she will send an embed to the log channel. The embed will contain the name of the user performing the command, the name of the restricted user, the roles that user had, and the reason provided. If no reason was provided, the embed will state that.
+## nhcarrigan Commands
 
-- `unmute [@username] [?reason]` - This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command will remove the `[@username]`'s role provided in the `muted_role` option. If the role option is not set, Becca will send a message to notify the user. If the `becca!config set log_channel [#channel]` option is set, Becca will send an embed to that channel. The embed will contain the name of the user performing the command, the name of the unrestricted user, and the reason provided. If no reason was provided, the embed will state that.
+The `/nhcarrigan` commands are locked to the bot's owner ID, and are used to manage the operations of the bot.
 
-- `warn [@username] [?reason]` - This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. If the `becca!config set log_channel [#channel]` option is set, Becca will send an embed to that channel. The embed will contain the name of the user performing the warning, the name of the warned user, and the reason provided. If no reason was provided, the embed will state that.
-
-## Server Commands
-
-These commands are related to server information or data.
-
-- `config [?set] [?key] [?value]` - This command lists the current server configuration, for logging channels etc. This command is locked to moderators with the Manage Server permission. The Discord user associated with the `process.env.OWNER_ID` can access this command regardless of permissions, but should only do so for the sake of development purposes.
-
-- `leave [server]` - Pass a server ID value for server, and Becca will leave that server. This command is locked to the Discord user associated with the `process.env.OWNER_ID` value.
-
-- `leaderboard` - Generates an embed containing the top ten users (by points) in the server, and the level + rank of the user who called the command.
-
-- `level` - This command sends an embed containing the message author's level and current experience points.
-
-- `list` - This command returns embed(s) containing a list of the servers Becca is in, and the owner information for each server. This command is restricted to the bot owner only.
-
-- `permissioncheck` - This command is locked to the `Manage Server` permission. When you run this command, Becca will check if she has the required permissions in the channel the command is used in, as well as at the server level. Becca will report the permissions she checked, the results for each permission, and a notice whether things need fixed or not.
-
-- `resetlevel` - This command resets the level data for the server. The command requires the "Manage Server" permission. Becca will clear all level data and set every user back to 0 points.
-
-- `resetstar` - This command resets the star counts for the server. The command requires the "Manage Server" permission. Becca will clear all of the star counts.
-
-- `role [role]` - This command accepts the name or Discord ID of a role as `[role]`. If that role exists and is in the server `self_roles` list, Becca will add or remove the role from the user. If the role parameter is omitted, Becca will return a list of self-assignable roles.
-
-- `server` - This command returns a message embed containing information about the current server. The information includes the server name, creation date, the user's join date, the server owner, member information, channel information, and role information.
-
-- `suggest [suggestion]` - Sends your suggestion to the server suggestions channel. If one is not configured, rejects the command. No special formatting is required for the suggestion parameter - Becca will use all of the text following the command itself.
-
-- `suggestion [approve|deny] [message_id] [?reason]` - Either approves or denies the suggestion in the message ID. Updates the embed with the approval/denial, the moderator who took the action, and the reason (if provided). This command requires the Manage Server permission.
+| Command      | Parameters          | Description                                                                                                         |
+| ------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `leave`      | `server-id: string` | Becca will leave the server matching `server-id`.                                                                   |
+| `list`       | `null`              | Generates a list of servers Becca is currently in, their owner IDs, and a count of total servers and unique owners. |
+| `serverdata` | `server: string`    | Returns detailed information on the server with ID matching `server`. Helpful for identifying suspicious server.    |
