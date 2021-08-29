@@ -55,6 +55,17 @@ The `/config` commands are used to manage the [server settings](/configure-serve
 | `set`   | `setting: Setting`, `value: string` | Sets the `setting` to the provided `value`, if valid. |
 | `view`  | `setting: Setting`                  | Shows the current values for the `setting`.           |
 
+## Currency Commands
+
+The `/currency` commands are used to earn [BeccaCoin](/currency.md), which can be exchanged for rewards in our [support server](https://links.nhcarrigan.com/discord).
+
+| Command  | Parameters       | Description                                         |
+| -------- | ---------------- | --------------------------------------------------- |
+| `about`  | `null`           | Provides information about the currency system.     |
+| `claim`  | `reward: string` | Exchanges your earned BeccaCoin for a given reward. |
+| `daily`  | `null`           | Generates your daily currency reward.               |
+| `weekly` | `null`           | Generates your weekly currency reward.              |
+
 ## Games Commands
 
 The `/games` commands are fun and silly commands to add a bit of charm to your community.

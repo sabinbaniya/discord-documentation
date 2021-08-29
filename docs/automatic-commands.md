@@ -12,6 +12,8 @@ There are a few messages that Becca will automatically send when certain conditi
 
 - `Command Usage Tracking` - Becca logs each command that is called and keeps a record of the number of calls for each command globally, and a record of calls on a per-server basis. The values are stored in a MongoDB database.
 
+- `Currency System` - Becca generates virtual currency (BeccaCoin) each time you use a command.
+
 - `Heart Reactions`- Becca will check the ID of each message's author. If the ID is in the array provided in the `becca!config add/remove hearts [@user]` config setting, she will add the `BECCA_LOVE` react to the message.
 
 - `Thank You Messages` - Becca checks for messages that thank a user (using a heavy regex for multi-lingual support) and will also thank that user.
