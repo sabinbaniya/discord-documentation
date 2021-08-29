@@ -57,7 +57,7 @@ The `/config` commands are used to manage the [server settings](/configure-serve
 
 ## Currency Commands
 
-The `/currency` commands are used to earn BeccaCoin, which can be exchanged for rewards in our [support server](https://links.nhcarrigan.com/discord).
+The `/currency` commands are used to earn [BeccaCoin](/currency.md), which can be exchanged for rewards in our [support server](https://links.nhcarrigan.com/discord).
 
 | Command  | Parameters       | Description                                         |
 | -------- | ---------------- | --------------------------------------------------- |

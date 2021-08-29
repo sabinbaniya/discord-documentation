@@ -10,6 +10,7 @@
 - [Deprecated Features](/deprecated-features.md)
 - [Contribute to Becca Lyria](/contribute.md)
 - [Level Scale](/level-scale.md)
+- [Currency System](/currency.md)
 - [Privacy Policy](/privacy-policy.md)
 
 ---
