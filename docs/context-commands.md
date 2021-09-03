@@ -8,4 +8,4 @@ Context Commands appear in the context menu when you right click on a user or me
 
 ## User Commands
 
-None yet. Coming soon!
+`activity` - This command allows you to see how many interactions the user has had with Becca!

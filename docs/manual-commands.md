@@ -118,8 +118,12 @@ The `/moderation` commands provide tools for moderating your community. These wi
 
 The `/nhcarrigan` commands are locked to the bot's owner ID, and are used to manage the operations of the bot.
 
-| Command      | Parameters          | Description                                                                                                         |
-| ------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `leave`      | `server-id: string` | Becca will leave the server matching `server-id`.                                                                   |
-| `list`       | `null`              | Generates a list of servers Becca is currently in, their owner IDs, and a count of total servers and unique owners. |
-| `serverdata` | `server: string`    | Returns detailed information on the server with ID matching `server`. Helpful for identifying suspicious server.    |
+| Command      | Parameters                     | Description                                                                                                         |
+| ------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| `leave`      | `server-id: string`            | Becca will leave the server matching `server-id`.                                                                   |
+| `list`       | `null`                         | Generates a list of servers Becca is currently in, their owner IDs, and a count of total servers and unique owners. |
+| `purge`      | `user: string`, `data: string` | Becca will purge all `data` data (i.e. `level` data) associated with the `user` id.                                 |
+| `register`   | `null`                         | Becca will re-register all application commands. Use this when a command's `data` has been changed (not the `run`). |
+| `serverdata` | `server: string`               | Returns detailed information on the server with ID matching `server`. Helpful for identifying suspicious server.    |
+| `unregister` | `command: string`              | Becca will unregister a specific command, deleting it from the list.                                                |
+| `viewslash`  | `null`                         | Becca will fetch all current available commands.                                                                    |
