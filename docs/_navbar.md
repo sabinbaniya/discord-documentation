@@ -7,6 +7,7 @@
 - [Configure Your Server](/configure-server.md)
 - [Automatic Commands](/automatic-commands.md)
 - [Manual Commands](/manual-commands.md)
+- [Context Commands](/context-commands.md)
 - [Deprecated Features](/deprecated-features.md)
 - [Contribute to Becca Lyria](/contribute.md)
 - [Level Scale](/level-scale.md)

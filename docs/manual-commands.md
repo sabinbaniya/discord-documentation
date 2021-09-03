@@ -59,12 +59,14 @@ The `/config` commands are used to manage the [server settings](/configure-serve
 
 The `/currency` commands are used to earn [BeccaCoin](/currency.md), which can be exchanged for rewards in our [support server](https://links.nhcarrigan.com/discord).
 
-| Command  | Parameters       | Description                                         |
-| -------- | ---------------- | --------------------------------------------------- |
-| `about`  | `null`           | Provides information about the currency system.     |
-| `claim`  | `reward: string` | Exchanges your earned BeccaCoin for a given reward. |
-| `daily`  | `null`           | Generates your daily currency reward.               |
-| `weekly` | `null`           | Generates your weekly currency reward.              |
+| Command  | Parameters       | Description                                                                                                         |
+| -------- | ---------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `21`     | `wager: number`  | Play a game of 21 against Becca. If you win, you get your `wager` in BeccaCoin. If you lose, you lose your `wager`. |
+| `about`  | `null`           | Provides information about the currency system.                                                                     |
+| `claim`  | `reward: string` | Exchanges your earned BeccaCoin for a given reward.                                                                 |
+| `daily`  | `null`           | Generates your daily currency reward.                                                                               |
+| `slots`  | `wager: number`  | Play a game of slots for double or nothing on your `wager`.                                                         |
+| `weekly` | `null`           | Generates your weekly currency reward.                                                                              |
 
 ## Games Commands
 
