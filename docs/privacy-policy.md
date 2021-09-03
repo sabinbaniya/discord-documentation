@@ -10,13 +10,47 @@ Access to Data is only permitted to Becca's developers, and only in the scope re
 
 Data is stored in a MongoDB database. The database is secured to prevent external access, however no guarantee is provided and Becca's owners assume no liability for the unintentional or malicious breach of Data. In the event of an unauthorised Data access, users will be notified through the Discord client application.
 
-## On Server Leave
+## Data Breakdown
 
-When Becca leaves a Discord server, the data related to that server is deleted. This deleted data includes, but is not limited to:
+Becca collects the following data for the following purposes:
 
-- Command Usage Logs for that server.
-- Custom config settings for that server.
-- User data associated with that server (e.g. level data)
+### Level System
+
+- `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
+- `User Name`: Becca stores your latest username to construct the levels leaderboard.
+- `Experience Points`: Becca awards experience points based on your message activity. Becca does _not_ store message content or metadata.
+- `Last Seen`: Becca tracks the last time you were seen sending a message in the server for the cooldown and the level command.
+
+### Currency System
+
+- `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
+- `Currency Total`: Becca tracks your currency total.
+- `Command Usage`: Becca tracks when you last used each currency command for the cooldown system.
+
+### Star System
+
+- `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
+- `User Name`: Becca stores your latest username to construct the star count leaderboard with.
+- `Star Total`: Becca tracks your star total.
+
+### Activity System
+
+- `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
+- `Activity`: Becca tracks the number of times you have used an application command (slash command, button, context menu, select menu). Becca does not store any specific information about those commands, just the counts.
+
+## Right to Opt Out
+
+You may opt out of any of the above data collections by joining our [support server](https://chat.nhcarrigan.com) and opening a ticket.
+
+## Global Data
+
+By inviting Becca to your Discord Server, you agree that information may be exposed to the development team via a private webhook. Such information includes, but may not be limited to:
+
+- The Server Name and ID
+- The Server Owner's Name and ID
+- Information related to errors generated in the server.
+
+This data is required for the maintenance of Becca. Opting out of this requires removing Becca from your server.
 
 ## User Rights
 

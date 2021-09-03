@@ -21,3 +21,5 @@ There are a few messages that Becca will automatically send when certain conditi
 - `Becca Lyria Mentions` - Becca listens for mentions (without thanks) of its own username, and responds accordingly.
 
 - `Blocked Users` - Becca verifies on each command call that the calling user is not blocked. She will respond accordingly if the user is blocked.
+
+- `Activity Tracking` - Becca will track a user's interaction counts (how many buttons they've clicked, how many commands they've used, etc.)
