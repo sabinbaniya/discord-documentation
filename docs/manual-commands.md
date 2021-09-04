@@ -77,6 +77,7 @@ The `/games` commands are fun and silly commands to add a bit of charm to your c
 | `fact`   | `null`         | Returns a random fun fact.                                                                                                                         |
 | `joke`   | `null`         | Returns a random joke.                                                                                                                             |
 | `mtg`    | `card: string` | Fetches and displays information on the given Magic: The Gathering `card`.                                                                         |
+| `slime`  | `null`         | Gives you a random slime-themed nickname.                                                                                                          |
 | `sus`    | `null`         | Selects an Among Us colour and declares it sus!                                                                                                    |
 | `trivia` | `null`         | Stars a trivia game. Players will have 30 seconds to select an answer using the buttons. At the end of the timer, Becca will announce the winners. |
 

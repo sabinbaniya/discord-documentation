@@ -14,6 +14,8 @@ By default, when you invite Becca to your server she will ask for the following 
 
 - Ban Members
 
+- View Channels
+
 - Read Messages
 
 - Send Messages
@@ -27,6 +29,10 @@ By default, when you invite Becca to your server she will ask for the following 
 - Read Message History
 
 - Add Reactions
+
+- Use External Emojis
+
+- Manage Nicknames
 
 All of these permissions are necessary for her features to work. Disabling any of these will cause unexpected errors to occur.
 
