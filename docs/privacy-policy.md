@@ -17,7 +17,8 @@ Becca collects the following data for the following purposes:
 ### Level System
 
 - `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
-- `User Name`: Becca stores your latest username to construct the levels leaderboard.
+- `User Name`: Becca stores your latest username and discriminator to construct the levels leaderboard.
+- `Avatar`: Becca stores your latest avatar URL for use on the web view.
 - `Experience Points`: Becca awards experience points based on your message activity. Becca does _not_ store message content or metadata.
 - `Last Seen`: Becca tracks the last time you were seen sending a message in the server for the cooldown and the level command.
 
@@ -30,13 +31,17 @@ Becca collects the following data for the following purposes:
 ### Star System
 
 - `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
-- `User Name`: Becca stores your latest username to construct the star count leaderboard with.
+- `User Name`: Becca stores your latest username and discriminator to construct the star count leaderboard with.
+- `Avatar`: Becca stores your latest avatar URL for use on the web view.
 - `Star Total`: Becca tracks your star total.
 
 ### Activity System
 
 - `User ID`: Becca uses your Discord user ID to identify you and associate the database record with your account.
 - `Activity`: Becca tracks the number of times you have used an application command (slash command, button, context menu, select menu). Becca does not store any specific information about those commands, just the counts.
+
+> [!NOTE]
+> A server's star counts and level leaderboard are available on Becca's dashboard as well as within the server.
 
 ## Right to Opt Out
 
