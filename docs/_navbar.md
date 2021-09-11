@@ -12,6 +12,7 @@
 - [Contribute to Becca Lyria](/contribute.md)
 - [Level Scale](/level-scale.md)
 - [Currency System](/currency.md)
+- [Changelog](/changelog.md)
 - [Privacy Policy](/privacy-policy.md)
 
 ---
