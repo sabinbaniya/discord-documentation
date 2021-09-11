@@ -2,9 +2,15 @@
 
 Here you can see changes made across each version of Becca.
 
+Becca's updates are deployed every Monday around 10AM Pacific Time.
+
 [Version 16](#version-16) | [Version 15](#version-15) | [Version 14](#version-14) | [Version 13](#version-13) | [Version 12](#version-12) | [Version 11](#version-11) | [Version 10](#version-10) | [Version 9](#version-9)
 
 ## Version 16
+
+### 16.9.0
+
+- Added the `updates` command.
 
 ### 16.18.3
 
