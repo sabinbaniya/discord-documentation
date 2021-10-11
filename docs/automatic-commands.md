@@ -23,3 +23,7 @@ There are a few messages that Becca will automatically send when certain conditi
 - `Blocked Users` - Becca verifies on each command call that the calling user is not blocked. She will respond accordingly if the user is blocked.
 
 - `Activity Tracking` - Becca will track a user's interaction counts (how many buttons they've clicked, how many commands they've used, etc.)
+
+- `Sass Listener` - Becca listens for messages that meet certain conditions (such as greetings and apologies) and responds with a sassy phrase.
+
+- `Server Command Usage` - Becca keeps count of the number of commands used in a server, and displays the top 10 servers by command usage on a leaderboard.
