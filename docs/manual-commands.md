@@ -2,6 +2,17 @@
 
 Becca's primary command system has been migrated to use Discord's new slash interface. To bring up the command menu, type `/`. You can then see available commands for each bot in your server, as well as the built-in Discord features.
 
+## Automod Commands
+
+The `/automod` commands are used to manage Becca's automatic moderation system.
+
+| Command  | Parameters                          | Description                                        |
+| -------- | ----------------------------------- | -------------------------------------------------- |
+| `reset`  | `setting: Setting`                  | Resets the specified setting to its default value. |
+| `set`    | `setting: Setting, value: Value`    | Sets the specified setting to the specified value. |
+| `toggle` | `feature: Setting, enabled: on/off` | Toggles the automod feature on or off..            |
+| `view`   | `setting: Setting`                  | Views the current value of the specified setting.  |
+
 ## Becca Commands
 
 The `/becca` commands relate to information about Becca herself.
@@ -11,6 +22,7 @@ The `/becca` commands relate to information about Becca herself.
 | `about`   | `null`       | Returns details about Becca's bot instance.                                                                  |
 | `art`     | `null`       | Returns an art sample from Becca's gallery.                                                                  |
 | `donate`  | `null`       | Returns information on donating to support Becca's development.                                              |
+| `emote`   | `null`       | Provides a random Becca emote.                                                                               |
 | `help`    | `null`       | Provides a series of links explaining how to use Becca.                                                      |
 | `invite`  | `null`       | Provides a link to invite Becca to a server.                                                                 |
 | `ping`    | `null`       | Returns Becca's response time to commands.                                                                   |
@@ -83,6 +95,16 @@ The `/games` commands are fun and silly commands to add a bit of charm to your c
 | `slime`  | `null`         | Gives you a random slime-themed nickname.                                                                                                          |
 | `sus`    | `null`         | Selects an Among Us colour and declares it sus!                                                                                                    |
 | `trivia` | `null`         | Stars a trivia game. Players will have 30 seconds to select an answer using the buttons. At the end of the timer, Becca will announce the winners. |
+
+## Log Commands
+
+The `/log` commands manage Becca's logging system, which tracks specific Discord events.
+
+| Command | Parameters                          | Description                                           |
+| ------- | ----------------------------------- | ----------------------------------------------------- |
+| `reset` | `setting: Setting`                  | Resets the `setting` to the default value.            |
+| `set`   | `setting: Setting`, `value: string` | Sets the `setting` to the provided `value`, if valid. |
+| `view`  | `null`                              | Shows the current values for all settings.            |
 
 ## Manage Commands
 
