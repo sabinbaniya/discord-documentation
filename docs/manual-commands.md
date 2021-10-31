@@ -83,18 +83,28 @@ The `/currency` commands are used to earn [BeccaCoin](/currency.md), which can b
 | `slots`  | `wager: number`  | Play a game of slots for double or nothing on your `wager`.                                                         |
 | `weekly` | `null`           | Generates your weekly currency reward.                                                                              |
 
+## Emote Commands
+
+The `/emote` commands allow you to perform an emote action on another user. The emotes a user has received is tracked.
+
+| Command | Parameters                     | Description                                  |
+| ------- | ------------------------------ | -------------------------------------------- |
+| `use`   | `emote: Choices`, `user: User` | Uses the chosen `emote` on the given `user`. |
+| `view`  | `null`                         | Shows a count of the emotes you've received. |
+
 ## Games Commands
 
 The `/games` commands are fun and silly commands to add a bit of charm to your community.
 
-| Command  | Parameters     | Description                                                                                                                                        |
-| -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `fact`   | `null`         | Returns a random fun fact.                                                                                                                         |
-| `joke`   | `null`         | Returns a random joke.                                                                                                                             |
-| `mtg`    | `card: string` | Fetches and displays information on the given Magic: The Gathering `card`.                                                                         |
-| `slime`  | `null`         | Gives you a random slime-themed nickname.                                                                                                          |
-| `sus`    | `null`         | Selects an Among Us colour and declares it sus!                                                                                                    |
-| `trivia` | `null`         | Stars a trivia game. Players will have 30 seconds to select an answer using the buttons. At the end of the timer, Becca will announce the winners. |
+| Command    | Parameters        | Description                                                                                                                                         |
+| ---------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fact`     | `null`            | Returns a random fun fact.                                                                                                                          |
+| `habitica` | `id: Habitica ID` | Returns information on the provided user's Habitica progress. Note that `id` is the user's ID (available in their profile URL), NOT their username. |
+| `joke`     | `null`            | Returns a random joke.                                                                                                                              |
+| `mtg`      | `card: string`    | Fetches and displays information on the given Magic: The Gathering `card`.                                                                          |
+| `slime`    | `null`            | Gives you a random slime-themed nickname.                                                                                                           |
+| `sus`      | `null`            | Selects an Among Us colour and declares it sus!                                                                                                     |
+| `trivia`   | `null`            | Stars a trivia game. Players will have 30 seconds to select an answer using the buttons. At the end of the timer, Becca will announce the winners.  |
 
 ## Log Commands
 
@@ -122,6 +132,7 @@ The `/misc` commands are things that did not fit in to any other category.
 
 | Command       | Parameters        | Description                                                                                            |
 | ------------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| `orbit`       | `null`            | Returns the Orbit leaderboard for our community, and links to join the community.                      |
 | `permissions` | `null`            | Confirms that Becca has the correct permissions in the server and in the channel this command is used. |
 | `space`       | `date?: string`   | Returns the NASA Astronomy Photo of the Day, either from today or `date` (formatted as `YYYY-MM-DD`).  |
 | `username`    | `length?: number` | Generates a DigitalOcean themed username with a max length of `number` or 30.                          |
@@ -156,7 +167,7 @@ The `/nhcarrigan` commands are locked to the bot's owner ID, and are used to man
 
 ## triggers Commands
 
-The `/triggers` commands manage your server's specific triggers.
+The `/triggers` commands manage your server's specific triggers. These commands require permission to manage the server.
 
 | Command  | Parameters                            | Description                         |
 | -------- | ------------------------------------- | ----------------------------------- |
