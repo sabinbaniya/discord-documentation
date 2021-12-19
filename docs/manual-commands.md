@@ -25,7 +25,7 @@ The `/becca` commands relate to information about Becca herself.
 | `emote`   | `null`       | Provides a random Becca emote.                                                                               |
 | `help`    | `null`       | Provides a series of links explaining how to use Becca.                                                      |
 | `invite`  | `null`       | Provides a link to invite Becca to a server.                                                                 |
-| `ping`    | `null`       | Returns Becca's response time to commands.                                                                   |
+| `ping`    | `null`       | Returns Becca's response time to commands, the websocket latency, and the database ping.                     |
 | `profile` | `null`       | Returns a link to Becca's profile page.                                                                      |
 | `stats`   | `view: Stat` | Provides a leaderboard for the chosen `view`                                                                 |
 | `updates` | `null`       | Displays the latest changes in Becca's code, the next expected release date, and the link to the change log. |
@@ -120,11 +120,12 @@ The `/log` commands manage Becca's logging system, which tracks specific Discord
 
 The `/manage` commands help with managing your community.
 
-| Command      | Parameters                                                | Description                                                                                                                      |
-| ------------ | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `resetlevel` | `null`                                                    | Resets the level leaderboard, clearing all data.                                                                                 |
-| `resetstars` | `null`                                                    | Resets the star counts, clearing all data.                                                                                       |
-| `suggestion` | `action: approve \| deny`, `id: string`, `reason: string` | Updates the suggestion embed with the given message `id`, marking it with the `action` and stating the `reason` for that action. |
+| Command      | Parameters                                                  | Description                                                                                                                      |
+| ------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `resetlevel` | `null`                                                      | Resets the level leaderboard, clearing all data.                                                                                 |
+| `resetstars` | `null`                                                      | Resets the star counts, clearing all data.                                                                                       |
+| `suggestion` | `action: approve \| deny`, `id: string`, `reason: string`   | Updates the suggestion embed with the given message `id`, marking it with the `action` and stating the `reason` for that action. |
+| `xpmodify`   | `action: add \| remove`, `user: User`, `adjustment: number` | Either `add` or `remove` the specified `adjustment` to the XP of the given `user`.                                               |
 
 ## Misc Commands
 
