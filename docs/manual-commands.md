@@ -17,19 +17,21 @@ The `/automod` commands are used to manage Becca's automatic moderation system.
 
 The `/becca` commands relate to information about Becca herself.
 
-| Command   | Parameters   | Description                                                                                                  |
-| --------- | ------------ | ------------------------------------------------------------------------------------------------------------ |
-| `about`   | `null`       | Returns details about Becca's bot instance.                                                                  |
-| `art`     | `null`       | Returns an art sample from Becca's gallery.                                                                  |
-| `donate`  | `null`       | Returns information on donating to support Becca's development.                                              |
-| `emote`   | `null`       | Provides a random Becca emote.                                                                               |
-| `help`    | `null`       | Provides a series of links explaining how to use Becca.                                                      |
-| `invite`  | `null`       | Provides a link to invite Becca to a server.                                                                 |
-| `ping`    | `null`       | Returns Becca's response time to commands, the websocket latency, and the database ping.                     |
-| `profile` | `null`       | Returns a link to Becca's profile page.                                                                      |
-| `stats`   | `view: Stat` | Provides a leaderboard for the chosen `view`                                                                 |
-| `updates` | `null`       | Displays the latest changes in Becca's code, the next expected release date, and the link to the change log. |
-| `uptime`  | `null`       | Returns the time since Becca came online.                                                                    |
+| Command     | Parameters   | Description                                                                                                  |
+| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------ |
+| `about`     | `null`       | Returns details about Becca's bot instance.                                                                  |
+| `adventure` | `null`       | Returns an image from one of Becca's adventures.                                                             |
+| `art`       | `null`       | Returns an art sample from Becca's gallery.                                                                  |
+| `donate`    | `null`       | Returns information on donating to support Becca's development.                                              |
+| `emote`     | `null`       | Provides a random Becca emote.                                                                               |
+| `help`      | `null`       | Provides a series of links explaining how to use Becca.                                                      |
+| `invite`    | `null`       | Provides a link to invite Becca to a server.                                                                 |
+| `ping`      | `null`       | Returns Becca's response time to commands, the websocket latency, and the database ping.                     |
+| `privacy`   | `null`       | Returns a link to Becca's privacy policy.                                                                    |
+| `profile`   | `null`       | Returns a link to Becca's profile page.                                                                      |
+| `stats`     | `view: Stat` | Provides a leaderboard for the chosen `view`                                                                 |
+| `updates`   | `null`       | Displays the latest changes in Becca's code, the next expected release date, and the link to the change log. |
+| `uptime`    | `null`       | Returns the time since Becca came online.                                                                    |
 
 ## Code Commands
 
@@ -141,16 +143,16 @@ The `/misc` commands are things that did not fit in to any other category.
 
 ## Moderation Commands
 
-The `/moderation` commands provide tools for moderating your community. These will all log to your moderation log channel.
+The `/moderation` commands provide tools for moderating your community. These will all log to your moderation log channel. When a user is the target of a moderation action, Becca will attempt to DM them to notify them of the action, with the `reason` that is provided.
 
-| Command     | Parameters                     | Description                                                                                                       |
-| ----------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| `ban`       | `user: User`, `reason: string` | Bans the `user` from the server for the given `reason`.                                                           |
-| `kick`      | `user: User`, `reason: string` | Kicks the `user` fromt he server for the given `reason`.                                                          |
-| `mute`      | `user: User`, `reason: string` | Applies the muted role to the `user` for the given `reason`, if the muted role is set.                            |
-| `unmute`    | `user: User`, `reason: string` | Removes the muted role from the `user` for the given `reason`, if the muted role is set.                          |
-| `warn`      | `user: User`, `reason: string` | Issues a warning to the `user` for the given `reason`, and adds that warning to their record.                     |
-| `warncount` | `user: User`                   | Returns the total number of warnings the `user` has received in your server, and the reason for the last warning. |
+| Command   | Parameters                                                         | Description                                                                                                          |
+| --------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| `ban`     | `user: User`, `reason: string`                                     | Bans the `user` from the server for the given `reason`.                                                              |
+| `kick`    | `user: User`, `reason: string`                                     | Kicks the `user` fromt he server for the given `reason`.                                                             |
+| `history` | `user: User`                                                       | Shows an embed with the number of each action that the `user` has received.                                          |
+| `mute`    | `user: User`, `duration: number`, `unit: string`, `reason: string` | Issues a Discord timeout to the `user` for the given `duration` in `unit`s (i.e. 3 days), for the provided `reason`. |
+| `unmute`  | `user: User`, `reason: string`                                     | Removes the Discord timeout on the `user` for the given `reason`.                                                    |
+| `warn`    | `user: User`, `reason: string`                                     | Issues a warning to the `user` for the given `reason`, and adds that warning to their record.                        |
 
 ## nhcarrigan Commands
 
@@ -158,11 +160,8 @@ The `/nhcarrigan` commands are locked to the bot's owner ID, and are used to man
 
 | Command      | Parameters                     | Description                                                                                                         |
 | ------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| `leave`      | `server-id: string`            | Becca will leave the server matching `server-id`.                                                                   |
-| `list`       | `null`                         | Generates a list of servers Becca is currently in, their owner IDs, and a count of total servers and unique owners. |
 | `purge`      | `user: string`, `data: string` | Becca will purge all `data` data (i.e. `level` data) associated with the `user` id.                                 |
 | `register`   | `null`                         | Becca will re-register all application commands. Use this when a command's `data` has been changed (not the `run`). |
-| `serverdata` | `server: string`               | Returns detailed information on the server with ID matching `server`. Helpful for identifying suspicious server.    |
 | `unregister` | `command: string`              | Becca will unregister a specific command, deleting it from the list.                                                |
 | `viewslash`  | `null`                         | Becca will fetch all current available commands.                                                                    |
 
